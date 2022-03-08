@@ -11,7 +11,7 @@ window.onload = function() {
 };
 
 const suits = ["&spades;", "&clubs;", "&hearts;", "&diams;"];
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
+const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"];
 
 const getRandom = (min, max) => {
   const randomNumber = Math.random();
@@ -19,35 +19,15 @@ const getRandom = (min, max) => {
   return Math.floor(integer);
 };
 
-const getRandom = (min, max) => {
-  const randomNumber = Math.random();
-  const float = randomNumber * (min - max) + min;
-  return Math.floor(float);
-};
-
-const getRandom = (min, max) => {
-  const randomNumber = Math.random();
-  const float = randomNumber * (min - max) + min;
-  return Math.floor(float);
-};
-
-const getRandom = (min, max) => {
-  const randomNumber = Math.random();
-  const float = randomNumber * (min - max) + min;
-  return Math.floor(float);
-};
-
-let suitIndex = getRandom(0, suit.leght - 1);
-
-let suitIndex = getRandom(0, suits.leght - 1);
-let numberIndex = getRandom(0, numbers.length - 1);
-undefined;
-const getRandom = (min, max) => {
-  const randomNumber = Math.random();
-  const float = randomNumber * (max - min) + min;
-  return Math.floor(float);
-};
-let suitIndex = getRandom(0, suits.leght - 1);
+let suitsIndex = getRandom(0, suits.length - 1);
 let numberIndex = getRandom(0, numbers.length - 1);
 
-numberIndex = getRandom(0, numbers.length - 1);
+
+const body = document.querySelector("body")
+const suitTop = body.queryselector(".suit.top")
+const numberContainer = body.document.querySelector(".number")
+const suitBottom = body.querySelector(".suit.bottom")
+
+numberContainer.innerHtml = numberIndex;
+suitTop.innerHtml = suitsIndex ;
+suitBottom.innerHtml = suitsIndex;
