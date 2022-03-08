@@ -3,3 +3,11 @@
 body {
   background-color: green;
 }
+
+#container {
+  justify-content: center;
+  background-color: white;
+}
+
+.suit.top {
+}
