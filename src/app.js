@@ -17,12 +17,25 @@ const getRandom = (min, max) => {
 let suitsIndex = getRandom(0, suits.length - 1);
 let numbersIndex = getRandom(0, numbers.length - 1);
 
+const suitsValue = "&spades;";
+const numberValue = 3;
+
 // const body = document.querySelector("body");
 const suitTop = document.querySelector(".suit.top");
 const numberContainer = document.querySelector(".numbers");
 const suitBottom = document.querySelector(".suit.bottom");
+const suitsToChange = ["&hearts;", "&diams"];
+const colorShouldBeRed = suitsToChange.includes(suitsValue);
 
-debugger;
+numberContainer.innerHTML = numberValue;
+suitTop.innerHTML = suitsValue;
+suitBottom.innerHTML = suitsValue;
+
+if (colorShouldBeRed) {
+  suitTop.classList.add("red");
+  suitBottom.classList.add("red");
+}
+
 window.onload = function() {
   numberContainer.innerHTML = numbers[numbersIndex];
   suitTop.innerHTML = suits[suitsIndex];
