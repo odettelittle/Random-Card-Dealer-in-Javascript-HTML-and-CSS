@@ -14,17 +14,16 @@ const getRandom = (min, max) => {
   return Math.floor(integer);
 };
 
-let suitsIndex = getRandom(0, suits.length - 1);
+let suitsIndex = getRandom(0, suits.length - 1); // save a random number between 0 and 3
 let numbersIndex = getRandom(0, numbers.length - 1);
 
-const suitsValue = "&spades;";
-const numberValue = 3;
+const suitsValue = suits[suitsIndex];
+const numberValue = numbers[numbersIndex];
 
-// const body = document.querySelector("body");
 const suitTop = document.querySelector(".suit.top");
 const numberContainer = document.querySelector(".numbers");
 const suitBottom = document.querySelector(".suit.bottom");
-const suitsToChange = ["&hearts;", "&diams"];
+const suitsToChange = ["&hearts;", "&diams;"];
 const colorShouldBeRed = suitsToChange.includes(suitsValue);
 
 numberContainer.innerHTML = numberValue;
